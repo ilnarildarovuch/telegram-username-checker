@@ -47,12 +47,12 @@ def create_channel(username):
             megagroup=True
         ))
 
-        client(functions.channels.EditUsernameRequest(
+        client(functions.channels.UpdateUsernameRequest(
             channel=result.chats[0],
             username=username
         ))
 
-        print(f"Канал '{username}' успешно создан с username '@{username}'.")
+        print(f"'{username}' created with username '@{username}'.")
     except errors.FloodWaitError as fW:
         print("Hit the rate limit while creating channel, waiting", fW.seconds, "seconds")
         time.sleep(fW.seconds)
