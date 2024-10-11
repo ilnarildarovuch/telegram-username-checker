@@ -1,5 +1,4 @@
 from telethon import TelegramClient, sync, functions, types, errors
-from telethon.sessions import StringSession
 import configparser
 import time
 import os
